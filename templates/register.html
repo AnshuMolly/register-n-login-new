@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            background-color: #fff;
+        }
+        .form-label {
+            font-weight: bold;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <h2 class="text-center mb-4">Register</h2>
+                    <form method="post" action="/register" class="row g-3">
+                        {% csrf_token %}
+                        <div class="col-md-12">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" id="username" name="loginname" class="form-control" placeholder="Create a username" required>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" name="keyword" class="form-control" id="password" placeholder="Password" required>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="confirm-password" class="form-label">Confirm Password</label>
+                            <input type="password" name="confirm_password" class="form-control" id="confirm-password" placeholder="Confirm Password" required>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" name="email" class="form-control" id="email" placeholder="Email Address" required>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" name="phone" class="form-control" id="phone" placeholder="Phone Number" required>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="address" class="form-label">Address</label>
+                            <input type="text" name="address" class="form-control" id="address" placeholder="Address" required>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="pincode" class="form-label">Pin Code</label>
+                            <input type="text" name="pincode" class="form-control" id="pincode" placeholder="Pin Code" required>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <button type="submit" class="btn btn-primary w-100">Register</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
